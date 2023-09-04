@@ -34,8 +34,8 @@
 
 // 1001 is not a perfect square.
 
-public class SquareRoot {
-    public static void squareRoot(){
+public class squareRoot {
+    public static void getSquareRoots(){
         System.out.println(getSquareRoot(121));
     } 
   static int getSquareRoot(int A) {  
