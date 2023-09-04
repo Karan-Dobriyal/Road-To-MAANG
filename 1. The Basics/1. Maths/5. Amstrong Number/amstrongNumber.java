@@ -15,7 +15,7 @@
 
 
 import java.util.Scanner; 
-public class amstrongNumber { 
+public class amstrongNumber {     // Time Complexity O(N) and Space Compplexity O(1).
     public static int countNum(int num){ 
         int count = 0; 
         while(num != 0){ 
