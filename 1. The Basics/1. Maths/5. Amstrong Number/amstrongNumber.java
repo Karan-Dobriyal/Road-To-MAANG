@@ -43,6 +43,7 @@ public class amstrongNumber {     // Time Complexity O(N) and Space Compplexity 
         int inputNum = sc.nextInt(); 
         int power = countNum(inputNum); 
         System.out.println(isArmstrong(inputNum,power)); 
+        sc.close();
     }
 
 }
