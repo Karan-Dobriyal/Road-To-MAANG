@@ -29,7 +29,7 @@
 // Follow up: Could you solve it without converting the integer to a string?
 
 
-class Solution {
+class checkPlaindrome {
     public boolean isPalindrome(int x) { // TC: O(logN) for reversing N digits of input integer and SC:O(1) 
         int dummy = x;
         int Y = reverse(x);
