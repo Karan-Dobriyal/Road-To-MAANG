@@ -37,14 +37,14 @@
 
 //  Sum of digits of 11 = 1 + 1 = 2
  
-public class Solution {
+public class SumOfDigits {  
         public int solve(int A) {
-            return SumOfDigits(A);
+            return getSumOfDigits(A);
         }
-        static int SumOfDigits(int n)
+        static int getSumOfDigits(int n)
         {
             if(n == 0) return 0; 
-            return SumOfDigits(n/10)+n%10;
+            return getSumOfDigits(n/10)+n%10;
         }
 }  
- 
+// TC : O(N) and SC : O(1)
