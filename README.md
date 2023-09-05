@@ -1,4 +1,4 @@
-# Road To Become Skillful Engineer 
+# Road To MAANG
 This repository follows Striver A2Z DSA sheet and Mine. All questions will be solved on Code Studio(Coding Ninja's) or Leetcode platform.
 
 The difficulty of question is set by Striver Sir so this repo makes folders like Easy, medium and hard according to that. In addition to that I also updated my question in it.
