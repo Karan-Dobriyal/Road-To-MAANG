@@ -61,3 +61,5 @@ public class FastExponention {
             return (int)ans; 
     }
 }
+
+// TC : O(LOGN) and SC : O(1)
