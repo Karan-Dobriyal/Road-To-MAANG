@@ -10,7 +10,7 @@
 // Output: 21
 // Explanation: 1+2+3+4+5+6=15
 
-public class Solution {
+public class sumOfFirstNumber {
     public static long sumFirstN(long n) {
         return (n*(n+1)/2);
     }

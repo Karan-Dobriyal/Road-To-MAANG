@@ -46,9 +46,9 @@
 //  Sum of digits of (13) = 4
 //  Single digit is not 1, so it's not a magic number. Return 0.
 
-public class isMagic {
+public class IsMagic {
      public int solve(int A) {
-       return isMagic(A)==1 ? 1 : 0;
+       return isMagics(A)==1 ? 1 : 0;
     }
 
     public int isMagics(int A){
@@ -56,7 +56,7 @@ public class isMagic {
          return A;
         }
         A = sumOfDigits(A);
-        return isMagic(A);
+        return isMagics(A);
     }
 
 
