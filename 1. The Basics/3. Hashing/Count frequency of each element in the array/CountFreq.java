@@ -18,6 +18,24 @@
 // 	     3 occurs 1 time in the array
 //              4 occurs 2 time in the array
 
-class CountFreq{
-    
+public class CountFreq {
+    public static int[] countFrequency(int n, int x, int []nums){
+        // Create a frequency array 'freq' of size 'n'
+        // with all elements initialized to 0.
+        int []ans = new int[n];
+
+        // Traverse the input array 'nums'.
+        for (int num : nums)
+        {
+            // Check if the element 'num' is within the range of 1 to n.
+            if (num <= n)
+            {
+                // Increment the frequency of 'num' in 'ans'.
+                ans[num - 1]++;
+            }
+        }
+
+        // Return the vector 'ans' containing the frequencies.
+        return ans;
+    }
 }
