@@ -45,6 +45,40 @@
 // The frequency of 3 in the array A is 0.
 // The frequency of 2 in the array A is 2.
 
+import java.util.HashMap;
+
 public class FreqElement {
-    
+    public static void main(String[] args)
+    {
+        int[] A = {2, 5, 9, 2, 8};
+        int[] B = {3, 2};
+         int[] ans = new int[B.length];
+         HashMap<Integer,Integer> hashMap = new HashMap<>();
+
+         // Putting values in Hashmap
+         for(int i=0; i<A.length; i++)
+         {
+             if(hashMap.containsKey(A[i]))
+             {
+                 hashMap.put(A[i], hashMap.get(A[i])+1);
+             }
+             else
+             {
+                 hashMap.put(A[i],1);
+             }
+         }
+         for(int i=0; i<B.length; i++)
+         {
+             if(hashMap.containsKey(B[i]))
+             {
+                ans[i] = hashMap.get(B[i]);
+             }
+             else
+             {
+                ans[i] = 0;
+             }
+         }
+    }
 }
+
+  
