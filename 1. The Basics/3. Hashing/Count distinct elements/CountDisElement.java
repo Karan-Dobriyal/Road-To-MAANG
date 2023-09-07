@@ -37,7 +37,18 @@
 // For Input 2:
 // The distinct elements of the array are 3, 9, 0 and 1.
 
+import java.util.HashSet;
 
 public class CountDisElement {
-    
+    public void solve() {
+        int[] A = {3, 3, 3, 9, 0, 1, 0};
+        HashSet<Integer> set  = new HashSet<>();
+
+        for(int i=0; i<A.length; i++)
+        {
+            set.add(A[i]);
+        }
+        System.out.println(set.size());
+    }
 }
+
