@@ -50,6 +50,32 @@
 
 //  The subarray [-1, 1] has sum 0.
 
+import java.util.HashSet;
+
 public class SubArrayZeroSum {
-    
+    public static void main()
+    {
+        int[] A = {1, 2, 3, 4, 5};
+        long[] psum = new long[A.length];
+        psum[0] = A[0]; 
+        int ans = 0;
+        for(int i=1; i<A.length; i++)
+        {
+            psum[i] = psum[i-1] + A[i];
+            if(psum[i] == 0) ans = 1;
+        } 
+        HashSet<Long> set = new HashSet<>();
+        for(int i = 0; i < psum.length; i++){
+          if(psum[i] == 0){
+              ans = 1;
+            }
+          if(set.contains(psum[i])){
+              ans = 1;
+            }
+          set.add(psum[i]);
+        }
+        ans= 0;
+        System.out.println(ans);
+    }
+    // Time Complexity is O(N), Space Complexity is O(N).
 }
