@@ -45,6 +45,43 @@
 
 //  The subarray with zero sum is [-1, 2, -1].
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class CountSubArrZeroSum {
-    
+    public static void main()
+    {
+        ArrayList<Integer> A=new ArrayList<Integer>();  
+        A.add(1);  
+        A.add(-1);  
+        A.add(2);  
+        A.add(-2);  
+        long count = 0l;
+        ArrayList<Long> psum = new ArrayList<>();
+        psum.add((long)A.get(0));
+        if(psum.get(0)==0){
+            count++;
+        }
+        for(int i=1;i<A.size();i++){
+            long val = ((long)A.get(i) + psum.get(i-1)%1000000007)%1000000007;
+            psum.add(val);
+            if(psum.get(i)==0){
+                count++;
+            }
+        }
+        HashMap<Long,Long> map = new HashMap<>();
+        for(long x:psum){
+            if(map.containsKey(x)){
+                count = count+map.get(x);
+                long f = map.get(x);
+                map.put(x,f+1);
+            }
+            else{
+                map.put(x,1l);
+            }
+        }
+        count = (count%1000000007)%1000000007;
+       System.out.println(count);
+    } 
+    // Time Complexity : O(N) and Space Complexity : O(N).
 }
