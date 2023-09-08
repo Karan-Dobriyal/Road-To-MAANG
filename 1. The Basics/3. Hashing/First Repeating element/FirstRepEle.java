@@ -83,4 +83,5 @@ public class FirstRepEle {
         }
         System.out.println(ans);
     }
+    // Time Complexity O(N) and Space Complexity is O(N).
 }
