@@ -45,6 +45,22 @@
 // Example 2:
 // There is no such pair exists.
 
+import java.util.HashSet;
+
 public class CheckPairSum {
-    
+    public static void main(String[] args)
+    {
+        int A = 8;   
+        int[] B = {3, 5, 1, 2, 1, 2};
+        int ans = 0;
+        HashSet < Integer > set = new HashSet < Integer > ();
+        for(int i = 0 ; i < B.length ; i++){
+            if(set.contains(A - B[i])){
+                ans= 1;
+            }
+            set.add(B[i]);
+        }
+        System.out.println(ans);
+    }
+    // Time Complexity : O(N) and Space Complexity : O(N)
 }
