@@ -65,6 +65,28 @@
 
 //  There is no such pairs, that has a difference of 9.
 
+import java.util.HashMap;
+
 public class PairDiff {
-    
+    public static void main(String[] args)
+    {
+        int[] A = {5, 10, 3, 2, 50, 80};
+        int B = 78;
+        HashMap<Integer,Integer> hashmapA = new HashMap<>();
+        if(B == 0) System.out.println(0);
+        for(int i=0; i<A.length; i++)
+        {
+            if(hashmapA.containsKey(A[i]))  hashmapA.put(A[i],hashmapA.get(A[i])+1);
+            else  hashmapA.put(A[i],1);
+        }
+        for(int i=0; i<A.length; i++)
+        {
+            int b = B + A[i];
+            if(hashmapA.containsKey(b))
+            {
+               System.out.println(1);
+            }
+        }
+        System.out.println(0);
+    }    
 }
