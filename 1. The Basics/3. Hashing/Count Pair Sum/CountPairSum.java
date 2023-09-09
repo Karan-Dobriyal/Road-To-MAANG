@@ -50,6 +50,23 @@
 
 // The pair which gives sum as 3 are (1, 2), (1, 4), (2, 3) and (3, 4). 
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CountPairSum {
-    
+    public static void main(String[] args)
+    {
+        int[] A = {1, 2, 1, 2};
+        int B = 3;
+         Map<Integer, Integer> freq = new HashMap<Integer, Integer>();
+        final int mod = (int)(1e9 + 7);
+        long ans = 0;
+        for(int i = 0 ; i < A.length ; i++){
+            if(freq.containsKey(B - A[i])){
+                ans = (ans + freq.get(B - A[i])) % mod;
+            }
+            freq.put(A[i], freq.getOrDefault(A[i], 0) + 1);
+        }
+    }
+    // Time Complexxity: O(N) and Space Complexity: O(N)
 }

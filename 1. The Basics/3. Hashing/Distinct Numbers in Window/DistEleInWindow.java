@@ -61,5 +61,8 @@
 //  Window size is 1, so the output array is [1, 1, 1, 1].
 
 public class DistEleInWindow {
-    
+    public static void main(String[] args)
+    {
+        
+    }
 }
