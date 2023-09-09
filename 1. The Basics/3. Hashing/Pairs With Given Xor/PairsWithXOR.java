@@ -55,6 +55,27 @@
 
 //  (3 ^ 6) = 5 and (10 ^ 15) = 5 
 
+import java.util.HashSet;
+
 public class PairsWithXOR {
-    
+    public static void main()
+    {
+        int[] A = {5, 4, 10, 15, 7, 6};
+        int B = 5;
+        int res = 0;
+        HashSet<Integer> hashset = new HashSet<>();
+        for(int i=0; i<A.length; i++)
+        {
+            if(hashset.contains(B ^ A[i]))
+            {
+                res++;
+            }
+            else
+            {
+                hashset.add(A[i]);
+            }
+        }
+        System.out.println(res);
+    }
+    // Time Complexity is O(N) and Space Complexity is O(N).
 }
