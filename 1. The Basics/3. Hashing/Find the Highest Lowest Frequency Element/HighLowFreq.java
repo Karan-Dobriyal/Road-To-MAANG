@@ -38,19 +38,11 @@ public static void getFrequencies(int []v) {
             MaxEle=element; 
             Maxfreq=count; 
         }  
-        else if(count==Maxfreq)
-        { 
-            MaxEle=Math.min(MaxEle,element); 
-        }  
         if(count<Minfreq)
         { 
             MinEle=element; 
             Minfreq=count; 
-        } 
-        else if(count==Minfreq)
-        { 
-            MinEle=Math.min(MinEle, element); 
-        } 
+        }  
     }
 
     int ans[]={MaxEle,MinEle};  
