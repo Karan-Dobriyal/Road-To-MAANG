@@ -56,6 +56,37 @@
 
 //  Elements (2, 10) appears in both the array.
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class CommonEle {
-    
+    public static void main(String[] args)
+    {
+        int[] A = {1, 2, 2, 1};
+        int[] B = {2, 3, 1, 2};
+        HashMap<Integer, Integer> a = new HashMap<Integer, Integer>();
+        HashMap<Integer, Integer> b = new HashMap<Integer, Integer>();
+
+       for(int x: A){
+            a.put(x, a.getOrDefault(x, 0)+1);
+        }
+        for(int x: B){
+            b.put(x, b.getOrDefault(x, 0)+1);
+        }
+
+        ArrayList<Integer> ans = new ArrayList<>();
+         for(int k: a.keySet()){
+            if(b.containsKey(k)){
+                for(int i = 0; i < Math.min(a.get(k), b.get(k)); ++i){
+                    ans.add(k);
+                }
+            }
+        } 
+        
+        for(int i=0; i<ans.size(); i++)
+        {
+            System.out.println(ans.get(i));
+        }
+    }
+    // Time Complexity : O(N+M) and Space Complxity is O(min(N, m))
 }
