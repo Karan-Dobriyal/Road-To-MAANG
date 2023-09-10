@@ -55,11 +55,19 @@
 //  Subarrays of A that have unique elements only:
 //  [2], [1], [2, 1], [1, 2], [2]
 
+import java.util.ArrayList;
+import java.util.HashSet;
+
 public class CountSubarrays {
     public static void main(String[] args)
     {
+        ArrayList<Integer> A = new ArrayList<>();
+        A.add(1);        
+        A.add(1);
+        A.add(3);
+
         long count = 0;
-        HashSet<Integer> hs = new HashSet<Integer> ();
+        HashSet<Integer> hs = new HashSet<Integer>();
         int i = 0;
         int j = 0;
 
@@ -75,4 +83,5 @@ public class CountSubarrays {
         }
         System.out.println((int)(count%1000000007));
     }
+    // Time Complexity : O(N) and Space Complexity : O(N)
 }
