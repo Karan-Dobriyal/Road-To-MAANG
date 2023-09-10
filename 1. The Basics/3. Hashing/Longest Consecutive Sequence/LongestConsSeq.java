@@ -49,12 +49,14 @@
 
 //  The set of consecutive elements will be [1, 2].
 
+import java.util.HashSet;
+
 public class LongestConsSeq
 {
     public static void main(String[] args)
     {
         int[] A = {100, 4, 200, 1, 3, 2};
-        HashSet<Integer> set = new HashSet();
+        HashSet<Integer> set = new HashSet<>();
         int max = 0;
         int n = A.length;
 
