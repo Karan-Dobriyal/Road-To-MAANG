@@ -80,5 +80,6 @@ public class FreqElement {
          }
     }
 }
+// Time Complexity : O(N) and Space Complexity : O(N)
 
   

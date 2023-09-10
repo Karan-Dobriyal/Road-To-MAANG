@@ -38,4 +38,5 @@ public class CountFreq {
         // Return the vector 'ans' containing the frequencies.
         return ans;
     }
+    // Time Complexity : O(N) and Space Complexity O(1).
 }

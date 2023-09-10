@@ -60,9 +60,35 @@
 
 //  Window size is 1, so the output array is [1, 1, 1, 1].
 
+import java.util.HashMap;
+
 public class DistEleInWindow {
     public static void main(String[] args)
     {
-        
+        int[] A = {1, 2, 1, 3, 4, 3};
+        int B = 3;
+        int[] ans = new int[A.length-B+1];
+        if(B>A.length) System.out.println(ans);
+
+        HashMap<Integer, Integer> hm = new HashMap<>();
+        for(int i=0; i<B; i++) {
+            if(hm.containsKey(A[i])) hm.put(A[i], hm.get(A[i])+1);
+            else hm.put(A[i], 1);
+        }
+
+        ans[0] = hm.size();
+
+        int s=1, e=B, i=1;
+        while(e < A.length){
+            if(hm.containsKey(A[e])) hm.put(A[e], hm.get(A[e])+1);
+            else hm.put(A[e], 1);
+
+            hm.put(A[s-1], hm.get(A[s-1])-1);
+            if(hm.get(A[s-1]) == 0) hm.remove(A[s-1]);
+            ans[i++] = hm.size();
+            s++; e++;
+        }
+        System.out.println(ans);
     }
+    // Time Complexity : O(N) and Space Complexity : O(N)
 }

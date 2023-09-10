@@ -27,5 +27,5 @@ class Recursion {
     }
 }
 // Time Complexity: O(N)
-// pace Complexity: O(N) { In the worst case, the recursion stack space would be full with all the function
+// Space Complexity: O(N) { In the worst case, the recursion stack space would be full with all the function
 // calls waiting to get completed and that would make it an O(N) recursion stack space }.

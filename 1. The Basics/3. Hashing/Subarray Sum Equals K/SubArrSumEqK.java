@@ -61,4 +61,5 @@ public class SubArrSumEqK {
         }
         System.out.println(ans);
     }
+    // Time Complexity : O(N) and Space Complexity : O(N)
 }
