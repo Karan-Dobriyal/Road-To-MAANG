@@ -79,11 +79,11 @@ class Solution {
         }
     }
 
-    public static void mergeSort(int[] arr, int low, int high) {
+    public static void mergeSort1(int[] arr, int low, int high) {
         if (low >= high) return;
         int mid = (low + high) / 2 ;
-        mergeSort(arr, low, mid);  // left half
-        mergeSort(arr, mid + 1, high); // right half
+        mergeSort1(arr, low, mid);  // left half
+        mergeSort1(arr, mid + 1, high); // right half
         merge(arr, low, mid, high);  // merging sorted halves
     }
 }
@@ -97,12 +97,13 @@ public class mergeSort {
             System.out.print(arr[i] + " ");
         } 
         System.out.println();
-        Solution.mergeSort(arr, 0, n - 1);
+        Solution.mergeSort1(arr, 0, n - 1);
         System.out.println("After sorting array: ");
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
+        sc.close();
     } 
 }
 
