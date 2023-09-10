@@ -60,5 +60,15 @@
 //  Row 4: 01101001
 
 public class KthSymbolHard {
-    
+    public class Solution {
+        public int solve(int A, long B) {
+                if(A==1)
+                return 0;
+            int res=solve(A-1,B/2);
+            if(B%2==0)
+                return res;
+            else
+                return 1-res;
+        } 
+    }     
 }
