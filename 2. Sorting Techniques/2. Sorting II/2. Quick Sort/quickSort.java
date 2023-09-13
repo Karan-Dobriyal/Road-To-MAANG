@@ -60,7 +60,7 @@
 
 import java.util.*;
 
-class quickSort {
+class quickSort1 {
     static int partition(List<Integer> arr, int low, int high) {
         int pivot = arr.get(low);
         int i = low;
@@ -93,15 +93,16 @@ class quickSort {
             qs(arr, pIndex + 1, high);
         }
     }
-    public static List<Integer> quickSort1(List<Integer> arr) {
+    public  List<Integer> quickSort2(List<Integer> arr) {
         // Write your code here.
         qs(arr, 0, arr.size() - 1);
         return arr;
     }
 }
 
-public class tUf {
+public class quickSort {
     public static void main(String args[]) {
+        
         List<Integer> arr = new ArrayList<>();
         arr = Arrays.asList(new Integer[] {4, 6, 2, 5, 7, 9, 1, 3});
         int n = arr.size();
@@ -110,7 +111,9 @@ public class tUf {
             System.out.print(arr.get(i) + " ");
         }
         System.out.println();
-        arr = Solution.quickSort1(arr);
+        quickSort1 qui = new quickSort1();
+        arr = qui.quickSort2(arr);
+        
         System.out.println("After insertion sort: ");
         for (int i = 0; i < n; i++) {
             System.out.print(arr.get(i) + " ");
