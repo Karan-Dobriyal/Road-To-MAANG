@@ -24,8 +24,8 @@ public class LeftRotateArrayByOne {
         if(k<0){
             k+=nums.length;
         }
-        reverse(arr,0,n-1);
-        reverse(arr,0,n-2);
+        reverse(nums,0,nums.length-1);
+        reverse(nums,0,nums.length-2);
     }
     static void reverse(int[] arr, int start, int end)
     {

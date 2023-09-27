@@ -31,13 +31,13 @@ public class MoveZeroesAtEnd {
         int[] a = {0,1,0,3,12};
         int j = -1;
         //place the pointer j:
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < a.length; i++) {
             if (a[i] == 0) {
                 j = i;
                 break;
             }
         }
-        for (int i = j + 1; i < n; i++) {
+        for (int i = j + 1; i < a.length; i++) {
             if (a[i] != 0) {
                 //swap a[i] & a[j]:
                 int tmp = a[i];

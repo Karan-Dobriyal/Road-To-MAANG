@@ -16,7 +16,7 @@ public class LinearSearch {
         int nums = 4;
         for(int i=0; i<arr.length; i++)
         {
-            if(arr[i] == num) System.out.println(i);
+            if(arr[i] == nums) System.out.println(i);
         }
         System.out.println(-1);
     } 
