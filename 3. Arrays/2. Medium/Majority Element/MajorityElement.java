@@ -23,7 +23,7 @@
 
 // Follow-up: Could you solve the problem in linear time and in O(1) space?
 
-public class MajiorityElement {
+public class MajorityElement {
     public static void main()
     {
         int[] nums = {2,2,1,1,1,2,2};

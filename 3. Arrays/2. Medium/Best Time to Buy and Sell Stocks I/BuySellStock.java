@@ -47,10 +47,10 @@
 public class BuySellStock {
     public static void main()
     {
-        int[] A = {1, 4, 5, 2, 4};
+        int[] prices = {1, 4, 5, 2, 4};
         int profit = 0;
-        if(prices.length == 0) System.out.println(profit);
-        return;
+        if(prices.length == 0) System.out.println(profit); 
+        
         int max = prices[prices.length-1];
       
         for(int i=prices.length-2; i>=0; i--)
