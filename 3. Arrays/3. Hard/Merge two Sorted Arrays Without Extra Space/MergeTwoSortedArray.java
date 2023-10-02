@@ -38,6 +38,7 @@
 
 // Follow up: Can you come up with an algorithm that runs in O(m + n) time?
 
+import java.util.Arrays;
 
 public class MergeTwoSortedArray {
     public static void main()
@@ -51,7 +52,7 @@ public class MergeTwoSortedArray {
         {
             if(a[left] > b[right])
             {
-                long temp = a[left];
+                int temp = a[left];
                 a[left] = b[right];
                 b[right] = temp;
                 left--;
