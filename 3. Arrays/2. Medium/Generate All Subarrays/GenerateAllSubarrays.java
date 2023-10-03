@@ -38,6 +38,7 @@
 // For Input 2:
 // All the subarrays of the array are returned. There are a total of 10 subarrays.
 
+import java.util.*;
 public class GenerateAllSubarrays {
     public static void main()
     {
