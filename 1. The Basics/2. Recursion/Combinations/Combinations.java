@@ -62,6 +62,7 @@
 
 // All the possible combinations of size 2 in sorted order.
 
+import java.util.*;
 public class Combinations {
     public void combine(int A, int B) {
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();

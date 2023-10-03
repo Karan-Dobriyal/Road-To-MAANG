@@ -43,6 +43,7 @@
 
 //  All paranthesis are given in the output list.
 
+import java.util.*;
 public class GenerateAllParaentheses {
     static  ArrayList<String> lst;
     public void generateParenthesis(int A) {
