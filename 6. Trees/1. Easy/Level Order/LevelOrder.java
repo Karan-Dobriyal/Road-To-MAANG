@@ -14,17 +14,7 @@
 
 // 5 10 15
  
-//   class TreeNode {
-//       int val;
-//       TreeNode left;
-//       TreeNode right;
-//       TreeNode(int x) {
-//        val = x;
-//        left=null;
-//        right=null;
-//       }
-//      }
- 
+  
 import java.util.*;
 class LevelOrder {
     public List<Integer> levelOrder(TreeNode root) {
@@ -51,3 +41,14 @@ class LevelOrder {
 // Time Complexity: O(N)
 
 // Space Complexity: O(N)
+  class TreeNode {
+      int val;
+      TreeNode left;
+      TreeNode right;
+      TreeNode(int x) {
+       val = x;
+       left=null;
+       right=null;
+      }
+     }
+ 
