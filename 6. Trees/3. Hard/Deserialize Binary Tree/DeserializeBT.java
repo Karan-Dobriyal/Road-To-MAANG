@@ -65,38 +65,22 @@
 import java.util.*;
 public class DeserializeBT {
     public TreeNode solve(ArrayList<Integer> A) {
-
-        TreeNode root = new TreeNode(A.get(0));
-        Queue<TreeNode> q = new LinkedList<>();
+        String[] values = {"1","2","3","4","5","#","6","#","#","#","#","#","#"};
+        TreeNode root = new TreeNode(Integer.parseInt(values[0]));
         q.add(root);
-        int i = 1;
-        while(q.size() != 0){
-            TreeNode cur = q.peek();
-            q.remove();
-            if(cur == null){
-                continue;
+        for (int i = 1; i < values.length; i++) {
+            TreeNode parent = q.poll();
+            if (!values[i].equals("n")) {
+                TreeNode left = new TreeNode(Integer.parseInt(values[i]));
+                parent.left = left;
+                q.add(left);
             }
-            int val_left = A.get(i);
-            int val_right = A.get(i+1);
-            
-            i += 2;
-            
-            if(val_left == -1){
-                cur.left = null;
+            if (!values[++i].equals("n")) {
+                TreeNode right = new TreeNode(Integer.parseInt(values[i]));
+                parent.right = right;
+                q.add(right);
             }
-            else{
-                cur.left = new TreeNode(val_left);
-            }
-            if(val_right == -1){
-                cur.right = null;
-            }
-            else{
-                cur.right = new TreeNode(val_right);
-            }
-            q.add(cur.left);
-            q.add(cur.right);
         }
-        
         return root;
 
     }
