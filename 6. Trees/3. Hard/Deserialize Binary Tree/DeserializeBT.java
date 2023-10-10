@@ -67,6 +67,7 @@ public class DeserializeBT {
     public TreeNode solve(ArrayList<Integer> A) {
         String[] values = {"1","2","3","4","5","#","6","#","#","#","#","#","#"};
         TreeNode root = new TreeNode(Integer.parseInt(values[0]));
+        Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
         for (int i = 1; i < values.length; i++) {
             TreeNode parent = q.poll();
