@@ -62,7 +62,8 @@
 
 // Right view is described.
 
-public class RigthViewBT {
+import java.util.*;
+public class RightViewBT {
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> result = new ArrayList<Integer>();
         rightView(root, result, 0);

@@ -18,21 +18,8 @@
 // preorder is guaranteed to be the preorder traversal of the tree.
 // inorder is guaranteed to be the inorder traversal of the tree.
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
+
+import java.util.*;
 class ConstructBT {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         HashMap<Integer,Integer> map = new HashMap<>();

@@ -66,7 +66,8 @@
  *     }
  * }
  */
-public class Solution {
+import java.util.*;
+public class ConstructBT {
     public TreeNode buildTree(int[] A, int[] B) {
         int s1 = 0;
         int e1 = B.length - 1;
