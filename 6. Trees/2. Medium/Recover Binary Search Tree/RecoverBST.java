@@ -61,8 +61,8 @@
 //        1   3
 // which is a valid BST 
 
-
-public class Solution {
+ 
+public class RecoverBST {
     int [] swap = new int[2];
     TreeNode prev= null;
     public int[] recoverTree(TreeNode A) {

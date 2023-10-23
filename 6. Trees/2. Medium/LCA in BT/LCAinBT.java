@@ -62,7 +62,7 @@
 
 //  LCA is 2.
  
-
+import java.util.*;
 public class LCAinBT {
     public int lca(TreeNode A, int B, int C) {
      

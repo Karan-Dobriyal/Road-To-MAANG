@@ -57,9 +57,9 @@
 // Output 2:
 
 //  3
-
+import java.util.*;
 public class BSTNodesInRange  {
-    class TreeNode {
+    public class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -94,7 +94,7 @@ public class BSTNodesInRange  {
     }
     
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(10);
+        TreeNode root = new TreeNode(10); 
         root.left = new TreeNode(5);
         root.right = new TreeNode(15);
         root.left.left = new TreeNode(3);
@@ -108,7 +108,7 @@ public class BSTNodesInRange  {
     
         System.out.println("Count of nodes in the range [" + low + ", " + high + "]: " + count);
     }
-    
+ 
 }
       
 // Time and Space O(H).
