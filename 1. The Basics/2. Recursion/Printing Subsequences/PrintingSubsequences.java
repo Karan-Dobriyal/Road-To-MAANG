@@ -16,8 +16,8 @@
 
 import java.util.*;
 
-public class Main {
-    public static void PrintingSubsequences(String[] args) {
+public class PrintingSubsequences {
+    public static void PrintingSubsequences1(String[] args) {
     int[] arr = {3,1,2};
     int n = 3;
     ArrayList<Integer> lst = new ArrayList<>();
